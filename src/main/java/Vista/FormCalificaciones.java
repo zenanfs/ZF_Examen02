@@ -43,7 +43,7 @@ public class FormCalificaciones extends javax.swing.JFrame {
         txtNotaUno = new javax.swing.JTextField();
         txtNotaDos = new javax.swing.JTextField();
         txtNotaTres = new javax.swing.JTextField();
-        btnIngresar = new javax.swing.JButton();
+        btnAgregarCalificacion = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -74,7 +74,7 @@ public class FormCalificaciones extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Recuperacion");
 
-        btnIngresar.setText("Ingresar Calificacion");
+        btnAgregarCalificacion.setText("Ingresar Calificacion");
 
         btnMenu.setText("Regresar al Menu Principal");
 
@@ -95,7 +95,7 @@ public class FormCalificaciones extends javax.swing.JFrame {
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtNumUnico, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAgregarCalificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnMenu))
                         .addGap(75, 75, 75)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -132,7 +132,7 @@ public class FormCalificaciones extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(cmbAsignaturas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(btnIngresar)
+                        .addComponent(btnAgregarCalificacion)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnMenu))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -234,12 +234,12 @@ public class FormCalificaciones extends javax.swing.JFrame {
         });
     }
 
-    public JButton getBtnIngresar() {
-        return btnIngresar;
+    public JButton getBtnAgregarCalificacion() {
+        return btnAgregarCalificacion;
     }
 
-    public void setBtnIngresar(JButton btnIngresar) {
-        this.btnIngresar = btnIngresar;
+    public void setBtnAgregarCalificacion(JButton btnAgregarCalificacion) {
+        this.btnAgregarCalificacion = btnAgregarCalificacion;
     }
 
     public JButton getBtnMenu() {
@@ -298,10 +298,17 @@ public class FormCalificaciones extends javax.swing.JFrame {
         this.txtNumUnico = txtNumUnico;
     }
     
+    public void limpiarCampos(){
+        txtNumUnico.setText("");
+        cmbAsignaturas.setSelectedIndex(0);
+        txtNotaUno.setText("");
+        txtNotaDos.setText("");
+        txtNotaTres.setText("");
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnAgregarCalificacion;
     private javax.swing.JButton btnMenu;
     private javax.swing.JComboBox<String> cmbAsignaturas;
     private javax.swing.JLabel jLabel1;
