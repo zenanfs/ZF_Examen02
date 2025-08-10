@@ -15,9 +15,9 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private int numUnico;
-    private JComboBox<String> materia;
+    private String materia;
 
-    public Estudiante(String nombre, String apellido, int numUnico, JComboBox<String> materia) {
+    public Estudiante(String nombre, String apellido, int numUnico, String materia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.numUnico = numUnico;
@@ -48,11 +48,11 @@ public class Estudiante {
         this.numUnico = numUnico;
     }
 
-    public JComboBox<String> getMateria() {
+    public String getMateria() {
         return materia;
     }
 
-    public void setMateria(JComboBox<String> materia) {
+    public void setMateria(String materia) {
         this.materia = materia;
     }
 
@@ -60,6 +60,5 @@ public class Estudiante {
     public String toString() {
         return "Estudiante{" + "nombre=" + nombre + ", apellido=" + apellido + ", numUnico=" + numUnico + ", materia=" + materia + '}';
     }
-
     
 }

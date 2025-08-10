@@ -41,14 +41,18 @@ public class FormAsignaturas extends javax.swing.JPanel {
         txtCreditos = new javax.swing.JTextField();
         cmbSemestre = new javax.swing.JComboBox<>();
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("SISTEMA ACADEMICO - ASIGNATURAS");
 
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre");
 
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Creditos");
 
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Semestre");
 
         btnAgregar.setText("Agregar Asignatura");
@@ -163,6 +167,12 @@ public class FormAsignaturas extends javax.swing.JPanel {
 
     public void setTxtNameAsignatura(JTextField txtNameAsignatura) {
         this.txtNameAsignatura = txtNameAsignatura;
+    }
+    
+    public void limpiarCampos(){
+        txtNameAsignatura.setText("");
+        txtCreditos.setText("");
+        cmbSemestre.setSelectedIndex(0);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

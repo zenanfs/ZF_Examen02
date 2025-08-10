@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author P3E004-K
@@ -28,23 +30,25 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnAsignaturas = new javax.swing.JButton();
+        btnEstudiantes = new javax.swing.JButton();
+        btnCalificaciones = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Menu Principal - SISTEMA ACADEMICO");
 
-        jButton1.setText("Asignaturas");
+        btnAsignaturas.setText("Asignaturas");
 
-        jButton2.setText("Estudiantes");
+        btnEstudiantes.setText("Estudiantes");
 
-        jButton3.setText("Calificaciones");
+        btnCalificaciones.setText("Calificaciones");
 
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Autor: Zenan Fernandez");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -53,11 +57,11 @@ public class FormPrincipal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jButton1)
+                .addComponent(btnAsignaturas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(btnEstudiantes)
                 .addGap(28, 28, 28)
-                .addComponent(jButton3)
+                .addComponent(btnCalificaciones)
                 .addGap(40, 40, 40))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,9 +80,9 @@ public class FormPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(btnAsignaturas)
+                    .addComponent(btnEstudiantes)
+                    .addComponent(btnCalificaciones))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -134,10 +138,36 @@ public class FormPrincipal extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBtnAsignaturas() {
+        return btnAsignaturas;
+    }
+
+    public void setBtnAsignaturas(JButton btnAsignaturas) {
+        this.btnAsignaturas = btnAsignaturas;
+    }
+
+    public JButton getBtnCalificaciones() {
+        return btnCalificaciones;
+    }
+
+    public void setBtnCalificaciones(JButton btnCalificaciones) {
+        this.btnCalificaciones = btnCalificaciones;
+    }
+
+    public JButton getBtnEstudiantes() {
+        return btnEstudiantes;
+    }
+
+    public void setBtnEstudiantes(JButton btnEstudiantes) {
+        this.btnEstudiantes = btnEstudiantes;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnAsignaturas;
+    private javax.swing.JButton btnCalificaciones;
+    private javax.swing.JButton btnEstudiantes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

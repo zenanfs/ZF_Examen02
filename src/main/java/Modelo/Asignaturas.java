@@ -14,9 +14,9 @@ public class Asignaturas {
     
     private String nameAsignatura;
     private int creditos;
-    private JComboBox<String> semestre;
+    private int semestre;
 
-    public Asignaturas(String nameAsignatura, int creditos, JComboBox<String> semestre) {
+    public Asignaturas(String nameAsignatura, int creditos, int semestre) {
         this.nameAsignatura = nameAsignatura;
         this.creditos = creditos;
         this.semestre = semestre;
@@ -38,11 +38,11 @@ public class Asignaturas {
         this.creditos = creditos;
     }
 
-    public JComboBox<String> getSemestre() {
+    public int getSemestre() {
         return semestre;
     }
 
-    public void setSemestre(JComboBox<String> semestre) {
+    public void setSemestre(int semestre) {
         this.semestre = semestre;
     }
 
@@ -50,7 +50,6 @@ public class Asignaturas {
     public String toString() {
         return "Asignaturas{" + "nameAsignatura=" + nameAsignatura + ", creditos=" + creditos + ", semestre=" + semestre + '}';
     }
-
     
     
 }
