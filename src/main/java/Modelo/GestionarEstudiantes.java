@@ -63,4 +63,13 @@ public class GestionarEstudiantes {
         return estudiantes;
     }
     
+    public Estudiante buscarEstudiantePorNumUnico(int numUnico) {
+    for (Estudiante estudiante : estudiantes) {
+        if (estudiante.getNumUnico() == numUnico) {
+            return estudiante;
+        }
+    }
+    return null;
+}
+    
 }

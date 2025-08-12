@@ -84,7 +84,6 @@ public class EstudianteController implements ActionListener{
     
     public void iniciarEst(){
         vista.setTitle("Gestion de Estudiantes");
-        vista.setSize(600, 400);
         vista.setLocationRelativeTo(null);
         vista.setVisible(true);
         actualizarTabla();

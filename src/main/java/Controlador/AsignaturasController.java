@@ -41,7 +41,6 @@ public class AsignaturasController implements ActionListener {
     
     public void iniciarAsig(){
         vista.setTitle("Gestion de Asignaturas");
-        vista.setSize(600, 400);
         vista.setLocationRelativeTo(null);
         vista.setVisible(true);
         modelo.cargarAsignatura();

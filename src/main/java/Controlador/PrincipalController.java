@@ -26,7 +26,6 @@ public class PrincipalController implements ActionListener {
     
     public void iniciarPrincipal(){
         vista.setTitle("Sistema Academico");
-        vista.setSize(600, 400);
         vista.setLocationRelativeTo(null);
         vista.setVisible(true);
     }
@@ -34,23 +33,39 @@ public class PrincipalController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.getBtnEstudiantes()) {
-            GestionarEstudiantes modelo = new GestionarEstudiantes();
-            FormEstudiantes form = new FormEstudiantes();
-            EstudianteController ctrl = new EstudianteController(modelo, form, vista);
-            vista.setVisible(false);
-            ctrl.iniciarEst();
+            abrirVentanaEstudiantes();
         } else if (e.getSource() == vista.getBtnAsignaturas()) {
-            GestionarAsignaturas modelo = new GestionarAsignaturas();
-            FormAsignaturas form = new FormAsignaturas();
-            AsignaturasController ctrl = new AsignaturasController(modelo, form, vista);
-            vista.setVisible(false);
-            ctrl.iniciarAsig();
+            abrirVentanaAsignaturas();
         } else if (e.getSource() == vista.getBtnCalificaciones()) {
-            FormCalificaciones form = new FormCalificaciones();
-            CalificacionesController ctrl = new CalificacionesController(form, vista);
-            vista.setVisible(false);
-            ctrl.iniciarCalif();
+            abrirVentanaCalificaciones();
         }
+    }
+
+    private void abrirVentanaEstudiantes() {
+        GestionarEstudiantes modelo = new GestionarEstudiantes();
+        FormEstudiantes form = new FormEstudiantes();
+        EstudianteController ctrl = new EstudianteController(modelo, form, vista);
+        vista.setVisible(false);
+        ctrl.iniciarEst();
+    }
+
+    private void abrirVentanaAsignaturas() {
+        GestionarAsignaturas modelo = new GestionarAsignaturas();
+        FormAsignaturas form = new FormAsignaturas();
+        AsignaturasController ctrl = new AsignaturasController(modelo, form, vista);
+        vista.setVisible(false);
+        ctrl.iniciarAsig();
+    }
+
+    private void abrirVentanaCalificaciones() {
+        GestionarCalificaciones modeloCalif = new GestionarCalificaciones();
+        GestionarEstudiantes modeloEst = new GestionarEstudiantes();
+        FormCalificaciones form = new FormCalificaciones();
+        CalificacionesController ctrl = new CalificacionesController(
+            modeloCalif, modeloEst, form, vista
+        );
+        vista.setVisible(false);
+        ctrl.iniciarCalif();
     }
     
 }

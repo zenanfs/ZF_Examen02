@@ -71,7 +71,6 @@ public class CalificacionesController implements ActionListener {
                     nota3 = Double.parseDouble(vista.getTxtNotaTres().getText());
                 }
 
-                // Buscar estudiante
                 Estudiante est = modeloEstudiantes.buscarEstudiantePorNumUnico(numUnico);
                 if (est == null) {
                     JOptionPane.showMessageDialog(vista, "Estudiante no encontrado");
@@ -80,7 +79,6 @@ public class CalificacionesController implements ActionListener {
 
                 double sumaNotas = nota1 + nota2;
                 String mensaje = "";
-                // Lógica de estado:
                 if (sumaNotas >= 28) {
                     nota3 = 0;
                     mensaje = "Estudiante exonerado";
@@ -91,7 +89,7 @@ public class CalificacionesController implements ActionListener {
                     }
                     mensaje = (nota3 > 14) ? "Aprobado" : "Reprobado";
                 } else {
-                    nota3 = 0; // No puede acceder a Nota3
+                    nota3 = 0;
                     mensaje = "Reprobado, no puede acceder a reucperacion";
                 }
 
@@ -107,6 +105,13 @@ public class CalificacionesController implements ActionListener {
             vista.setVisible(false);
             menuPrincipal.setVisible(true);
         }
+    }
+    
+    public void iniciarCalif(){
+        vista.setTitle("Gestion de Calificaciones");
+        vista.setLocationRelativeTo(null);
+        vista.setVisible(true);
+        actualizarTabla();
     }
     
 }
